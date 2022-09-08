@@ -24,9 +24,9 @@ currentOperand.textContent ="";
 });
 equalButton.addEventListener("click",()=>{
 if (operator == "+") {
-      return (
+      currentOperand.textContent=
         parseFloat(previousOperand.textContent) +
         parseFloat(currentOperand.textContent)
-      );
+     
     }
 })
