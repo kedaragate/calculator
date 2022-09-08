@@ -19,7 +19,7 @@ numberButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     currentOperand.textContent =
       currentOperand.textContent + e.target.innerText;
-/*if(button.textContent=="."){
+if(button.textContent=="."){
 currentOperand.textContent.contains(”.");
 return;
 else{
@@ -30,7 +30,7 @@ currentOperand.textContent=currentOperand.textContent+".";
 
 }
 }
-}*/
+}
   });
 });
 
