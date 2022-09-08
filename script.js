@@ -7,6 +7,14 @@ let previousOperand = document.querySelector(".previous-operand");
 let currentOperand = document.querySelector(".current-operand");
 let operator;
 
+
+allClearButton.addEventListener ("click",()=>{
+currentOperand.textContent="";
+previousOperand.textContent="";
+operator="";
+
+})
+
 numberButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     currentOperand.textContent =
