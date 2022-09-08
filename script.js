@@ -23,7 +23,7 @@ currentOperand.textContent ="";
   });
 });
 equalButton.addEventListener("click",()=>{
-if (operator === "+") {
+if (operator == "+") {
       return (
         parseFloat(previousOperand.textContent) +
         parseFloat(currentOperand.textContent)
