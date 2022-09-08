@@ -13,11 +13,12 @@
   flex-wrap: wrap;
 
   justify-content: space-around;
+align-items:space-around;
 }
 
 .button {
-  width:92px;
-height:92px;
+  width:90px;
+height:90px;
   
 background-color:white;
 color:#242424;
