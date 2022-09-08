@@ -18,12 +18,9 @@ operator="";
 numberButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     
-currentOperand.textContent=currentOperand.textContent+e.target.textContent;
+currentOperand.textContent=currentOperand.textContent+e.target.innerText;
 
 
-}
-}
-}
   });
 });
 
