@@ -19,6 +19,13 @@ numberButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     currentOperand.textContent =
       currentOperand.textContent + e.target.innerText;
+if(button=="."){
+currentOperand.textContent.contains(".");
+return;
+else{
+currentOperand.textContent=".";
+}
+}
   });
 });
 
