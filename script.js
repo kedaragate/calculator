@@ -37,4 +37,11 @@ if (operator == "+") {
         parseFloat(currentOperand.textContent)
      
     }
+else if (operator == "-") {
+      currentOperand.textContent=
+        parseFloat(previousOperand.textContent) -
+        parseFloat(currentOperand.textContent)
+     
+    }
+
 })
