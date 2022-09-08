@@ -17,8 +17,7 @@ operator="";
 
 numberButton.forEach((button) => {
   button.addEventListener("click", (e) => {
-    currentOperand.textContent =
-      currentOperand.textContent + e.target.innerText;
+    
 if(button.textContent=="."){
 currentOperand.textContent.contains(”.");
 return;
@@ -26,7 +25,7 @@ else{
 if(currentOperand.textContent="")
 currentOperand.textContent="0.";
 else{
-currentOperand.textContent=currentOperand.textContent+".";
+currentOperand.textContent=currentOperand.textContent+e.target.textContent;
 
 }
 }
