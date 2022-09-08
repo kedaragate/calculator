@@ -17,7 +17,7 @@ numberButton.forEach((button) => {
 operationButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     operator = e.target.innerText;
-    previousOperand.textContent = currentOperand.textContent+operator;;
+    previousOperand.textContent =previousOperand.textContent+ currentOperand.textContent+operator;
 currentOperand.textContent ="";
     
   });
