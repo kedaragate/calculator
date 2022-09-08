@@ -20,10 +20,15 @@ numberButton.forEach((button) => {
     currentOperand.textContent =
       currentOperand.textContent + e.target.innerText;
 if(button=="."){
-currentOperand.textContent.contains(".");
+currentOperand.textContent.contains(”.");
 return;
 else{
-currentOperand.textContent=".";
+if(currentOperand.textContent="")
+currentOperand.textContent="0.";
+else{
+currentOperand.textContent=currentOperand.textContent+".";
+
+}
 }
 }
   });
