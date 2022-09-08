@@ -4,18 +4,18 @@
   margin: 100px auto;
   display: flex;
   flex-direction: column;
-  place-content: center;
+  
 }
 
 .calculator-body {
   display: flex;
   flex-wrap: wrap;
 
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .number-button {
-  width: 40px;
+  flex-grow:1;
   margin-bottom: 5px;
 background-color:#242424;
 color:white;
