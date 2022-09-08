@@ -21,8 +21,9 @@ height:80px;
 background-color:#242424;
 color:white;
 outline:none;
-border:none;
+border:.2px solid white;
 border-radius:5px;
+
 
 }
 
