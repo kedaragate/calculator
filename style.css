@@ -49,6 +49,7 @@ body {
 }
 .equal-button {
   flex-grow: 2;
+  width: 190px;
 }
 #clear {
   background-color: red;
