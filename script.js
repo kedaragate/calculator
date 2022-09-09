@@ -43,7 +43,7 @@ operationButton.forEach((button) => {
 });
 equalButton.addEventListener("click", () => {
   if (currentOperand.textContent.startsWith(operator)) {
-    return;
+    return null;
   }
   memoryArray.push(previousOperand.textContent);
   if (operator == "+") {
