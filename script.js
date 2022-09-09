@@ -34,6 +34,7 @@ numberButton.forEach((button) => {
 
 operationButton.forEach((button) => {
   button.addEventListener("click", (e) => {
+
     operator = e.target.innerText;
 
     previousOperand.textContent = currentOperand.textContent + operator;
@@ -41,7 +42,7 @@ operationButton.forEach((button) => {
   });
 });
 equalButton.addEventListener("click", () => {
-  if (currentOperand.textContent == NaN) {
+  if (currentOperand.textContent.startsWith(operator)) {
     return;
   }
   memoryArray.push(previousOperand.textContent);
