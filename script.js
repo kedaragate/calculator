@@ -7,55 +7,52 @@ let previousOperand = document.querySelector(".previous-operand");
 let currentOperand = document.querySelector(".current-operand");
 let operator;
 
-
-allClearButton.addEventListener ("click",()=>{
-currentOperand.textContent="";
-previousOperand.textContent="";
-operator="";
-
-})
+allClearButton.addEventListener("click", () => {
+  currentOperand.textContent = "";
+  previousOperand.textContent = "";
+  operator = "";
+});
 
 numberButton.forEach((button) => {
   button.addEventListener("click", (e) => {
-    
-currentOperand.textContent=currentOperand.textContent+e.target.innerText;
+    if (e.target.innerText == ".") {
+      if (currentOperand.textContent.includes(".")) {
+        return;
+      }
+    }
 
-
+    currentOperand.textContent =
+      currentOperand.textContent + e.target.innerText;
+    if (currentOperand.textContent.startsWith(".")) {
+      currentOperand.textContent = "0.";
+    }
   });
 });
 
 operationButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     operator = e.target.innerText;
-    previousOperand.textContent =previousOperand.textContent+ currentOperand.textContent+operator;
-currentOperand.textContent ="";
-    
+    previousOperand.textContent =
+      previousOperand.textContent + currentOperand.textContent + operator;
+    currentOperand.textContent = "";
   });
 });
-equalButton.addEventListener("click",()=>{
-if (operator == "+") {
-      currentOperand.textContent=
-        parseFloat(previousOperand.textContent) +
-        parseFloat(currentOperand.textContent)
-     
-    }
-else if (operator == "-") {
-      currentOperand.textContent=
-        parseFloat(previousOperand.textContent) -
-        parseFloat(currentOperand.textContent)
-     
-    }
-else if (operator == "*") {
-      currentOperand.textContent=
-        parseFloat(previousOperand.textContent) *
-        parseFloat(currentOperand.textContent)
-     
-    }
-else if (operator == "/") {
-      currentOperand.textContent=
-        parseFloat(previousOperand.textContent) /
-        parseFloat(currentOperand.textContent)
-     
-    }
-
-})
+equalButton.addEventListener("click", () => {
+  if (operator == "+") {
+    currentOperand.textContent =
+      parseFloat(previousOperand.textContent) +
+      parseFloat(currentOperand.textContent);
+  } else if (operator == "-") {
+    currentOperand.textContent =
+      parseFloat(previousOperand.textContent) -
+      parseFloat(currentOperand.textContent);
+  } else if (operator == "*") {
+    currentOperand.textContent =
+      parseFloat(previousOperand.textContent) *
+      parseFloat(currentOperand.textContent);
+  } else if (operator == "/") {
+    currentOperand.textContent =
+      parseFloat(previousOperand.textContent) /
+      parseFloat(currentOperand.textContent);
+  }
+});
