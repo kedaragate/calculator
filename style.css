@@ -19,7 +19,7 @@ margin: 0 auto;
   width: 400px;
   height: 500px;
   border: 0.2px solid #242424;
-box-shadow:2px 2px 2px black;
+box-shadow:10px 10px 0px black;
 }
 .output {
   background-color: #242424;
