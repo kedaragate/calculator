@@ -50,8 +50,6 @@ body {
 .equal-button {
   flex-grow: 2;
   width: 190px;
-  background-color: #242424;
-  color: white;
 }
 #clear {
   background-color: red;
