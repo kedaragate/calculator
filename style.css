@@ -14,7 +14,7 @@ padding: 0;
 
 .calculator {
   display: flex;
-place-items:center;
+margin: 0 10px;
   flex-direction: column;
   width: 400px;
   height: 500px;
