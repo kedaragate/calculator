@@ -63,6 +63,9 @@ equalButton.addEventListener("click", () => {
       (parseFloat(previousOperand.textContent) * 10) /
       (parseFloat(currentOperand.textContent) * 10);
   }
+if((previousOperand.textContent.endsWith(operator))&&currentOperand.textContent==""){
+return currentOperand.textContent=previousOperand.textContent
+}
 });
 memoryShowButton.addEventListener("click", () => {
   currentOperand.textContent = memoryArray.at(-1);
