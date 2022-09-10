@@ -8,18 +8,19 @@ body {
     rgba(63, 94, 251, 1) 0%,
     rgba(131, 70, 252, 1) 100%
   );
-margin:0;
-padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .calculator {
   display: flex;
-margin: 0 auto;
+  margin: 0 auto;
   flex-direction: column;
   width: 400px;
   height: 500px;
   border: 0.2px solid #242424;
-box-shadow:10px 10px 20px black;
+  box-shadow: 10px 10px 20px black;
 }
 .output {
   background-color: #242424;
@@ -44,6 +45,10 @@ box-shadow:10px 10px 20px black;
   flex-grow: 1;
   font-size: 1.5rem;
   cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(131, 70, 252, 0.1);
+  color: white;
 }
 .row {
   width: 100%;

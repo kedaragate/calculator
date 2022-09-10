@@ -1,14 +1,14 @@
 let numberButton = document.querySelectorAll(".number-button");
 let operationButton = document.querySelectorAll(".operation-button");
 let allClearButton = document.querySelector(".all-clear-button");
-let deleteButton = document.querySelector(".delete-button");
+let clearButton = document.querySelector(".clear-button");
 let equalButton = document.querySelector(".equal-button");
 let previousOperand = document.querySelector(".previous-operand");
 let currentOperand = document.querySelector(".current-operand");
-let memoryHideButton = document.querySelector(".memory-hide-button");
-let memoryShowButton = document.querySelector(".memory-show-button");
+
 let operator;
-let memoryArray = [];
+let previousOperandText = [];
+let currentOperandText = [];
 
 allClearButton.addEventListener("click", () => {
   currentOperand.textContent = "";
@@ -23,9 +23,9 @@ numberButton.forEach((button) => {
         return;
       }
     }
-
     currentOperand.textContent =
       currentOperand.textContent + e.target.innerText;
+
     if (currentOperand.textContent.startsWith(".")) {
       currentOperand.textContent = "0. ";
     }
@@ -34,7 +34,6 @@ numberButton.forEach((button) => {
 
 operationButton.forEach((button) => {
   button.addEventListener("click", (e) => {
-
     operator = e.target.innerText;
 
     previousOperand.textContent = currentOperand.textContent + operator;
@@ -42,10 +41,8 @@ operationButton.forEach((button) => {
   });
 });
 equalButton.addEventListener("click", () => {
-  if (currentOperand.textContent.startsWith(operator)) {
-    currentOperand.textContent=`0${operator}`;
-  }
-  memoryArray.push(previousOperand.textContent);
+  previousOperand.textContent =
+    previousOperand.textContent + currentOperand.textContent;
   if (operator == "+") {
     currentOperand.textContent =
       parseFloat(previousOperand.textContent) +
@@ -60,12 +57,7 @@ equalButton.addEventListener("click", () => {
       parseFloat(currentOperand.textContent);
   } else if (operator == "/") {
     currentOperand.textContent =
-      (parseFloat(previousOperand.textContent) * 10) /
-      (parseFloat(currentOperand.textContent) * 10);
+      parseFloat(previousOperand.textContent) /
+      parseFloat(currentOperand.textContent);
   }
-
-
-});
-memoryShowButton.addEventListener("click", () => {
-  currentOperand.textContent = memoryArray.at(-1);
 });
